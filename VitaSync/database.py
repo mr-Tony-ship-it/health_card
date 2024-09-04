@@ -1,8 +1,7 @@
 import mysql.connector
 user="root"
 password=""
-database="hmt"
-
+database="vitasync"
 
 
 def select(q):

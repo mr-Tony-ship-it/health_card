@@ -11,7 +11,7 @@
     <div class="registration-container">
         <div class="card">
             <div class="logo">
-                <img src="logo.png" alt="Health Card Logo">
+                <img src="{{ url_for('static', filename='img/images1.jpeg') }}" alt="Health Card Logo">
             </div>
             <h2>Register Health Card</h2>
             <form id="registrationForm">
@@ -25,12 +25,20 @@
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <input type="tel" id="phone" name="phno" placeholder="Enter your phone number" required>
 
-                <label for="address">Address</label>
-                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                <input type="radio" name="gen" value="male"> <label for="phone">Male</label>
+                <input type="radio" name="gen" value="female"> <label for="phone">Femail</label>
+                <input type="radio" name="gen" value="other"> <label for="phone">Other</label>
+        
+                <label for="address">Password</label>
+                <input type="text" id="pass" name="pass" placeholder="Enter the password" required>
+                <div class="form-group">
+                    <label for="images">Upload Images:</label>
+                    <input type="file" id="images" name="img" multiple>
+                </div>
 
-                <button type="submit">Register</button>
+                <button name="submit">Register</button>
             </form>
             <div class="footer">
                 <a href="#"><img src="home_icon.png" alt="Home"></a>

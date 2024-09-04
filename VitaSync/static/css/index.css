@@ -25,8 +25,8 @@ body {
 }
 
 .logo img {
-    width: 50px;
-    margin-bottom: 20px;
+    width: 100px;
+    margin-bottom: 5px;
 }
 
 h2 {
@@ -74,5 +74,5 @@ button:hover {
 }
 
 .footer img {
-    width: 30px;
+    width: 50px;
 }
