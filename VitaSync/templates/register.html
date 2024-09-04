@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Health Card Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="registration-container">
+        <div class="card">
+            <div class="logo">
+                <img src="logo.png" alt="Health Card Logo">
+            </div>
+            <h2>Register Health Card</h2>
+            <form id="registrationForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+                <button type="submit">Register</button>
+            </form>
+            <div class="footer">
+                <a href="#"><img src="home_icon.png" alt="Home"></a>
+                <a href="#"><img src="linkedin_icon.png" alt="LinkedIn"></a>
+                <a href="#"><img src="lock_icon.png" alt="Secure"></a>
+                <a href="#"><img src="phone_icon.png" alt="Contact"></a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
