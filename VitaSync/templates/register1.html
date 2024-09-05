@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="login">
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             <h1>Registration Form</h1>
             <label>Name:</label>
             <input type="text" id="name" name="name" required>
@@ -20,17 +20,15 @@
             <input type="number" id="phno" name="phno" pattern="\d{10}" required>
             
             <label>dob</label>
-            <input type="date"  name="dob" maxlength="10" required>
-            <input type="radio" name="gen" value="male"> <label for="phone">Male</label>
-            <input type="radio" name="gen" value="female"> <label for="phone">Femail</label>
-            <input type="radio" name="gen" value="other"> <label for="phone">Other</label>
-            
+            <input type="date" name="dob" maxlength="10" required>
+<div class="radio">
+    <label for="gen"> Male </label><input type="radio" name="gen" value="male" class="large-radio">
+    <label for="gen">Femail</label><input type="radio" name="gen" value="female"class="large-radio"> 
+    <label for="gen">Other </label><input type="radio" name="gen" value="other"class="large-radio"> 
+</div>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-            <div class="form-group">
-                <label for="images">Upload Images:</label>
-                <input type="file" id="images" name="img" multiple>
-            </div>
+            
             <button name="submit">Register</button>
         </form>
     </div>

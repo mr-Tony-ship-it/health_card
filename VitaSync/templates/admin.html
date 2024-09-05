@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a href="">Dashboard</a></li>
+                    <li><a href="/user_view">Patients</a></li>
+                    <li><a href="/upload">Uploads</a></li>
+                    <li><a href="/status">Status</a></li>
+                   
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <h2>Welcome to the Admin Dashboard</h2>
+            <!-- Content goes here -->
+        </main>
+        <div class="image-container">
+        <img src="data:image/png;base64,{{ plot_url }}" />
+        <img src="data:image/png;base64,{{ plot_url1 }}" /></div>
+        
+        <a href="/d_view" class="btn btn-info">View Patients</a><br><br>
+        <footer class="footer">
+            <p>&copy;  Healthcare Portal</p>
+        </footer>
+    </div>
+
+    <!-- Include the uploaded file here 
+    <script src="script.js"></script>-->
+</body>
+</html>

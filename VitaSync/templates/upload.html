@@ -1,0 +1,49 @@
+<!doctype html>
+<title>Upload new File</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  form {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+</style>
+<h1>Upload new File</h1>
+<form method="post" enctype="multipart/form-data">
+  <label>Blood test:</label>
+  <input type="file" name="btest"><br>
+  <label>Scan Report:</label>
+  <input type="file" name="s_report"><br>
+  <label>Other Reports:</label>
+  <input type="file" name="other"><br>
+  <input type="submit" value="Upload">
+</form>

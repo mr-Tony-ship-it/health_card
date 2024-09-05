@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(237, 220, 220, 0.334);
+}
+
+.header {
+    background-color: #a4b475;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline-block;
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header nav ul li a:hover {
+    color: #ccc;
+}
+
+.main {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.image-container {
+    display: flex;
+    gap: 10px; /* Adjust the gap between images if needed */
+    justify-content: center; /* Centers images horizontally */
+    margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensures the images are responsive */
+    height: auto; /* Maintains the aspect ratio of the images */
+}
+

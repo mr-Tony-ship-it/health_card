@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_plot.css') }}">
+    <title>Add a Plot</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Add Treatment History</h2>
+    <form action="" method="POST" enctype="multipart/form-data">
+        
+        <!-- Personal Information -->
+        <div class="form-group">
+            <label >Vitasync CardID:</label>
+            <input type="text" id="full_name" name="name" value="{{ cardID if cardID else '' }}" required>
+        </div>
+
+        <!-- Upload Images -->
+        <div class="form-group">
+            <select name="test1" id="medical-tests">
+                <option value="scanning_reports">Scanning Reports</option>
+                <option value="blood_test">Blood Test</option>
+                <option value="x_ray">X-Ray</option>
+                <option value="mri">MRI</option>
+                <option value="ultrasound">Ultrasound</option>
+                <option value="urine_test">Urine Test</option>
+                <option value="ecg">ECG</option>
+            </select>  </div>
+            <div class="form-group"> <input type="file" name="img1" multiple>
+        </div>
+        <div class="form-group">
+            <select name="test2" id="medical-tests">
+                <option value="scanning_reports">Scanning Reports</option>
+                <option value="blood_test">Blood Test</option>
+                <option value="x_ray">X-Ray</option>
+                <option value="mri">MRI</option>
+                <option value="ultrasound">Ultrasound</option>
+                <option value="urine_test">Urine Test</option>
+                <option value="ecg">ECG</option>
+            </select> </div>
+            <div class="form-group"> 
+                <input type="file" id="img2" name="img2" multiple>
+        </div>
+        <div class="form-group">
+            <select name="test3" id="medical-tests">
+                <option value="scanning_reports">Scanning Reports</option>
+                <option value="blood_test">Blood Test</option>
+                <option value="x_ray">X-Ray</option>
+                <option value="mri">MRI</option>
+                <option value="ultrasound">Ultrasound</option>
+                <option value="urine_test">Urine Test</option>
+                <option value="ecg">ECG</option>
+            </select>  </div>
+            <div class="form-group"> <input type="file" id="img3" name="img3" multiple>
+        </div>
+        <div class="form-group">
+            <select name="test4" id="medical-tests">
+                <option value="scanning_reports">Scanning Reports</option>
+                <option value="blood_test">Blood Test</option>
+                <option value="x_ray">X-Ray</option>
+                <option value="mri">MRI</option>
+                <option value="ultrasound">Ultrasound</option>
+                <option value="urine_test">Urine Test</option>
+                <option value="ecg">ECG</option>
+            </select>  </div>
+            <div class="form-group"> <input type="file" id="img4" name="img4" multiple>
+        </div>
+        <div class="form-group">
+            <select name="test5" id="medical-tests">
+                <option value="scanning_reports">Scanning Reports</option>
+                <option value="blood_test">Blood Test</option>
+                <option value="x_ray">X-Ray</option>
+                <option value="mri">MRI</option>
+                <option value="ultrasound">Ultrasound</option>
+                <option value="urine_test">Urine Test</option>
+                <option value="ecg">ECG</option>
+            </select>  </div>
+            <div class="form-group"> <input type="file" id="img5" name="img5" multiple>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit" name="submit">Submit Scanning Reports</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

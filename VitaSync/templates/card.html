@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/card.css') }}">
+    <title>View Health Card</title>
+</head>
+<body>
+    <div class="container">
+    <div class="section section1">
+    <h1>Your Health Card</h1>
+    <div class="health-card">
+        <div class="card-header">
+          <h2>Health Card</h2>
+          <span class="card-id">ID: {{unique_ser.CardID}}</span>
+        </div>
+        <div class="card-body">
+          <p><strong>Name:</strong> {{patient_data.name}}</p>
+          <p><strong>Date of Birth:</strong> {{patient_data.dob}}</p>
+          <p><strong>Genter:</strong> {{patient_data.gen}}</p>
+          <p><strong>Medications:</strong> {{patient_data.email}}</p>
+        </div>
+        <div class="card-footer">
+          <p><strong>Contact:</strong>{{patient_data.phno}}</p>
+          <p><strong>Doctor:</strong> Dr. Smith</p>
+        </div>
+      </div>
+    </div>
+      <div class="section section2">
+      <embed src="{{ pdf_output }}" width="800" height="700" type="application/pdf"></div></div>
+</body>
+</html>

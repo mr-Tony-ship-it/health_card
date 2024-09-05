@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Patient</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .dashboard {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    .search-form {
+      margin-bottom: 20px;
+    }
+    .search-form input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    .search-form button {
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .search-form button:hover {
+      background-color: #0056b3;
+    }
+    .patient-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .profile-section {
+      flex-shrink: 0;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ddd;
+    }
+    .details-section {
+      flex-grow: 1;
+    }
+    .details-section h2 {
+      margin-top: 0;
+    }
+    .details-section p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <header class="header">
+      <h1>View Patient</h1>
+    </header>
+    
+    <!-- Search Form -->
+    <form class="search-form" action="{{ url_for('public.view_patient') }}" method="POST">
+      <input type="text" name="patient_id" placeholder="Enter Patient ID" required>
+      <button type="submit">Search</button>
+    </form>
+
+    {% if name %}
+    <div class="patient-info">
+      <div class="profile-section">
+        {% if image_path %}
+        <img src="{{ url_for('static', filename=image_path) }}" alt="Profile Image" class="profile-img">
+        {% else %}
+        <img src="{{ url_for('static', filename='default-profile.png') }}" alt="Default Image" class="profile-img">
+        {% endif %}
+      </div>
+      <div class="details-section">
+        <h2>{{ name }}</h2>
+        <p>Email: {{ email }}</p>
+        <p>Phone: {{ phno }}</p>
+        <p>Date of Birth: {{ dob }}</p>
+        <p>Gender: {{ gender }}</p>
+      </div>
+    </div>
+    {% else %}
+    <p>No patient details available. Please search for a patient by ID.</p>
+    {% endif %}
+  </div>
+</body>
+</html>
+

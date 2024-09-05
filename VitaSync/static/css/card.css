@@ -1,0 +1,32 @@
+.relative-container {
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row; /* Arrange children horizontally */
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .section {
+    flex: 1; /* Each section takes an equal share of the container */
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .section1 {
+    background-color: #f1f1f1;
+  }
+  
+  .section2 {
+    background-color: #e1e1e1;
+  }
+  
+  .section3 {
+    background-color: #d1d1d1;
+  }
+  
+  
+
+  
